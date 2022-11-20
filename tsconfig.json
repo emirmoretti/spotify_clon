@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "resolveJsonModule": true, //usar imp json en nuestros componentes
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -18,6 +19,11 @@
     "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
+    "paths": {  //**! Creacion de paths para que el codigo no se haga muy largo al importar y mantener el cleancode
+      "@core/*": ["src/app/core/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@modules/*": ["src/app/modules/*"]
+    },
     "lib": [
       "es2020",
       "dom"
